@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="品牌 (Brand)"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="型号 (Model)"
+        app:layout_constraintTop_toBottomOf="@id/etBrand" />
+
+    <EditText
+        android:id="@+id/etPlateNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="车牌号码 (Number)"
+        app:layout_constraintTop_toBottomOf="@id/etModel" />
+
+    <EditText
+        android:id="@+id/etRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="续航里程 (Range)"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/etPlateNumber" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:backgroundTint="#CCCCCC"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAdd"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="添加"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
